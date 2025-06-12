@@ -97,7 +97,7 @@ class ImageConvertView(APIView):
         cv2.line(img, (x1, y1), (x2, y2), color, thickness)
 
         # 6. Görüntüyü göster
-        cv2.imshow("Geometrik Sekiller", img)
+        cv2.imwrite("Geometrik Sekiller.jpg", img)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
 
@@ -152,7 +152,7 @@ class ImageConvertView(APIView):
         cv2.imwrite("03_edges.jpg", edges)
 
         # 5. İsteğe bağlı: göster
-        cv2.imshow("Canny Edge Detection", edges)
+        cv2.imwrite("Canny Edge Detection.jpg", edges)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
 

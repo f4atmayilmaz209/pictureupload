@@ -1,6 +1,6 @@
 "use client"
-import Image from "next/image";
-import { useEffect, useState } from "react";
+
+import { useState } from "react";
 
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
     formData.append("image", file);
 
     try {
-      const response = await fetch("http://localhost:8000/upload/uploadpicture/", {
+      const response = await fetch("http://localhost:8000/upload/", {
         method: "POST",
         body: formData,
       });
