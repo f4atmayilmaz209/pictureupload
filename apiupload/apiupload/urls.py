@@ -17,9 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import ImageConvertView
+from .api import hello_api
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('upload/',ImageConvertView.as_view(),name='convert-image'),
+    path('upload/',hello_api),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
